@@ -14,12 +14,25 @@
 		box-shadow: 0 0 140px 5px #000 inset;
 	}
 	.container {
-		padding: 40px;
+		padding: 20px;
 		margin:0 auto;
 	}
-	header {
-		width: 100%;
-		margin:0px auto;
+	section{
+		margin:0 auto;
+		max-width: 700px;
+	}
+	.brand h1{
+		font-size: 900px;
+		padding: 0;
+		line-height: 90%;
+	}
+	.description a,
+	.description p{
+		text-align: center;
+		font-family: "Impact";
+		font-size: 45px;
+		margin: 1.2em 0 1.6em;
+		color: #fff;
 	}
 	h1 {
 		text-align: center;
@@ -39,8 +52,32 @@
 <body>
 
 	<div class="container">
-		<header>
-			<h1>I'm default</h1>
+		<section class="brand">
+			<h1 data-compressor="0.3">Make a</h1>
+			<h1 data-compressor="0.2">Sexy</h1>
+			<h1 data-compressor="0.2">Text</h1>
+		</section>
+		<section class="description">
+			<p>
+				SexyText.JS is a jQuery plugin written by <a href="mailto:felipe@smallorange.co">Felipe Rohde</a> from <a href="http://smallorange.co">Small Orange</a>
+				to get sexy fluid & responsive headline texts with high control, and reach sexy results.
+				It works well even with Absolute and Inline elements.
+			</p>
+			<p>
+				Join the
+				<a href="https://github.com/smallorangeco/SexyText.js">
+					Source Code
+				</a>
+			</p>
+			<p>
+				Grab the
+				<a href="https://github.com/smallorangeco/SexyText.js/archive/master.zip">
+					ZIP File
+				</a>
+			</p>
+		</section>
+		<section class="examples">
+			<h1>I'm Examples</h1>
 			<h1 data-compressor="1.5">I compress more</h1>
 			<h1 data-compressor="0.8">I compress less</h1>
 			<h1 data-max-font="70">70px is my max</h1>
@@ -50,7 +87,7 @@
 			<h1 style="display: inline">I'm an inlined element</h1>
 			<h1 data-max-font="70">Made with Love by</h1>
 			<h1>http://smallorange.co</h1>
-		</header>
+		</section>
 	</div>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
