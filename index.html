@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Sexytext.js by smallorangeco</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Sexytext.js</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/smallorangeco/SexyText.js/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/smallorangeco/SexyText.js/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/smallorangeco/SexyText.js" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="sexytextjs" class="anchor" href="#sexytextjs"><span class="octicon octicon-link"></span></a>SexyText.js</h1>
+
+<p>Is a jQuery plugin to make responsive and fluid sexy words, originally developed for <a href="http://smallorange.co">Small Orange</a> framework.</p>
+
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.Sexytext.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'h1,h2,h3'</span><span class="p">).</span><span class="nx">SexyText</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>I'm default<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">data-compressor=</span><span class="s">"1.5"</span><span class="nt">&gt;</span>I compress more<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">data-compressor=</span><span class="s">"0.8"</span><span class="nt">&gt;</span>I compress less<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">data-max-font=</span><span class="s">"70"</span><span class="nt">&gt;</span>70px is my max<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">data-min-font=</span><span class="s">"30"</span><span class="nt">&gt;</span>30px is my min<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">data-trigger=</span><span class="s">"920"</span><span class="nt">&gt;</span>I'm fluid When <span class="nt">&lt; 920px</span><span class="err">&lt;/</span><span class="na">h1</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">data-max-font=</span><span class="s">"70"</span><span class="nt">&gt;</span>Made with love by<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1&gt;</span>http://smallorange.co<span class="nt">&lt;/h1&gt;</span>
+</pre></div>
+
+<p>And the text will be fluid (:</p>
+
+<h2>
+<a name="data-attributes" class="anchor" href="#data-attributes"><span class="octicon octicon-link"></span></a>Data Attributes</h2>
+
+<ul>
+<li><p>data-compressor: Defines how much the text will change, less values, less compression, big values, big compression. Accept float values like 0.5, 0.8, 1.5. {Default: 1.0}</p></li>
+<li><p>data-min-font: Defines the minimum font-size. Accept integer values like 30, 40, 50. {Default: No Default}.</p></li>
+<li><p>data-max-font: Defines the maximum font-size. Accept integer values like 30, 40, 50. {Default: The own word font-size}.</p></li>
+<li><p>data-trigger: Defines the minimum viewport when SexyText.js will iterate. {Default: No Default}.</p></li>
+</ul><h2>
+<a name="important" class="anchor" href="#important"><span class="octicon octicon-link"></span></a><strong>IMPORTANT</strong>
+</h2>
+
+<ul>
+<li>
+<strong>Make sure your container has a width</strong>
+
+<ul>
+<li>
+<code>display: inline</code> elements don't have a width. Use <code>display: block</code> OR <code>display: inline-block</code>+ a specified width (i.e. <code>width: 100%</code>).</li>
+<li>
+<code>position:absolute</code> elements need a specified width as well.</li>
+</ul>
+</li>
+</ul><h2>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<ul>
+<li>
+<code>v 1.0</code> - Initial Release</li>
+</ul><h2>
+<a name="help-and-contribute" class="anchor" href="#help-and-contribute"><span class="octicon octicon-link"></span></a>Help and Contribute</h2>
+
+<p>Yeah, use and develop it, we will like (:</p>
+
+<p>Visit <a href="http://smallorange.co">Small Orange</a></p>
+
+<p>Questions Felipe Rohde {<a href="mailto:felipe@smallorange.co">felipe@smallorange.co</a>}</p>
+        </section>
+
+        <footer>
+          Sexytext.js is maintained by <a href="https://github.com/smallorangeco">smallorangeco</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
