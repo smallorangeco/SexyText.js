@@ -15,8 +15,10 @@ Is a jQuery plugin to make responsive and fluid sexy words, originally developed
 <h1 data-compressor="0.8">I compress less</h1>
 <h1 data-max-font="70">70px is my max</h1>
 <h1 data-min-font="30">30px is my min</h1>
-<h1 data-trigger="920">I'm fluid When < 920px</h1>
-<h1 data-max-font="70">Made with love by</h1>
+<h1 data-trigger="920">I'm Fluid When < 920px</h1>
+<h1 data-offset-right="100">I have 100px of Right Offset</h1>
+<h1 style="display: inline">I'm an inlined element</h1>
+<h1 data-max-font="70">Made with Love by</h1>
 <h1>http://smallorange.co</h1>
 ```
 
@@ -31,13 +33,13 @@ And the text will be fluid (:
 
 - data-trigger: Defines the minimum viewport when SexyText.js will iterate. {Default: No Default}.
 
-## **IMPORTANT**
-
-- **Make sure your container has a width**
-  - `display: inline` elements don't have a width. Use `display: block` OR `display: inline-block`+ a specified width (i.e. `width: 100%`).
-  - `position:absolute` elements need a specified width as well.
+- data-offset-right: Defines the minimum right offset when the word is compressed. {Default: 0}
 
 ## Changelog
+* `v 1.1` 
+	* Support for Inline and Absolute Elements
+	* Added "data-offset-right" Control
+	* Released Minified Version
 * `v 1.0` - Initial Release
 
 ## Help and Contribute

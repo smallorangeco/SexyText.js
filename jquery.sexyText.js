@@ -1,5 +1,5 @@
 /*
- * Small Orange - sexyText.js
+ * Small Orange - sexyText.js 1.1
  *
  * Copyright 2014, Felipe Rohde
  * Released under the MIT license
@@ -20,12 +20,17 @@
                 'compressor': self.data('compressor') || 1,
                 'min_font': self.data('min-font') || Number.NEGATIVE_INFINITY,
                 'max_font': self.data('max-font') || self.css('font-size'),
-                'trigger': self.data('trigger') || Number.POSITIVE_INFINITY
+                'trigger': self.data('trigger') || Number.POSITIVE_INFINITY,
+                'offset_r': self.data('offset-right') || 0
             };
 
             var run = function() {
                 if (window.innerWidth < options.trigger) {
-                    self.css('font-size', Math.max(Math.min(self.width() / (options.compressor * 10), parseFloat(options.max_font)), parseFloat(options.min_font)));
+                    var is_special = (self.css('display') === 'inline' || self.css('position') === 'absolute');
+                    var l_offset = self.offset().left;
+                    var equation = (is_special ? (window.innerWidth-l_offset) : self.width()) - options.offset_r;
+
+                    self.css('font-size', Math.max(Math.min(equation / (options.compressor * 10), parseFloat(options.max_font)), parseFloat(options.min_font)));
                 } else {
                     self.css('font-size', '');
                 }
